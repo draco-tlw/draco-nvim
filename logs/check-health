@@ -1,0 +1,534 @@
+
+==============================================================================
+blink.cmp:                                 require("blink.cmp.health").check()
+
+System ~
+- ✅ OK curl is installed
+- ✅ OK git is installed
+- ✅ OK Your system is supported by pre-built binaries (x86_64-unknown-linux-gnu)
+- ⚠️ WARNING blink_cmp_fuzzy lib is not downloaded/built
+
+Sources ~
+- ⚠️ WARNING Some providers may show up as "disabled" but are enabled dynamically (i.e. cmdline)
+
+Default sources ~
+- lsp (blink.cmp.sources.lsp)
+- lazydev (lazydev.integrations.blink)
+- snippets (blink.cmp.sources.snippets)
+- path (blink.cmp.sources.path)
+
+Disabled sources ~
+- buffer (blink.cmp.sources.buffer)
+- omni (blink.cmp.sources.complete_func)
+- cmdline (blink.cmp.sources.cmdline)
+
+==============================================================================
+conform:                                     require("conform.health").check()
+
+conform.nvim report ~
+- Log file: /home/draco/.local/state/nvim/conform.log
+- ✅ OK stylua ready (lua)
+
+==============================================================================
+kickstart:                                 require("kickstart.health").check()
+
+kickstart.nvim ~
+- NOTE: Not every warning is a 'must-fix' in `:checkhealth`
+
+    Fix only warnings for plugins and languages you intend to use.
+      Mason will give warnings for languages that are not installed.
+      You do not need to install, unless you want to use those languages!
+- System Information: {
+    machine = "x86_64",
+    release = "6.8.0-58-generic",
+    sysname = "Linux",
+    version = "#60-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 14 18:29:48 UTC 2025"
+  }
+- ✅ OK Neovim version is: '0.12.0-dev'
+- ✅ OK Found executable: 'git'
+- ✅ OK Found executable: 'make'
+- ✅ OK Found executable: 'unzip'
+- ✅ OK Found executable: 'rg'
+
+==============================================================================
+lazy:                                           require("lazy.health").check()
+
+lazy.nvim ~
+- {lazy.nvim} version `11.17.1`
+- ✅ OK {git} `version 2.43.0`
+- ⚠️ WARNING found existing packages at `/home/draco/.local/share/nvim/site/pack/packer`
+- ✅ OK packer_compiled.lua not found
+
+luarocks ~
+- checking `hererocks` installation
+- ✅ OK no plugins require `luarocks`, so you can ignore any warnings below
+- ✅ OK {python3} `Python 3.12.3`
+- ❌ ERROR {/home/draco/.local/share/nvim/lazy-rocks/hererocks/bin/luarocks} not installed
+- ⚠️ WARNING {/home/draco/.local/share/nvim/lazy-rocks/hererocks/bin/lua} version `5.1` not installed
+- ⚠️ WARNING Lazy won't be able to install plugins that require `luarocks`.
+  Here's what you can do:
+   - fix your `luarocks` installation
+   - disable *hererocks* with `opts.rocks.hererocks = false`
+   - disable `luarocks` support completely with `opts.rocks.enabled = false`
+
+==============================================================================
+lspconfig:                                 require("lspconfig.health").check()
+
+- Skipped. This healthcheck is redundant with `:checkhealth vim.lsp`.
+
+==============================================================================
+luasnip:                                     require("luasnip.health").check()
+
+luasnip ~
+- ✅ OK jsregexp is installed
+
+==============================================================================
+mason:                                         require("mason.health").check()
+
+mason.nvim ~
+- ✅ OK mason.nvim version v1.11.0
+- ✅ OK PATH: prepend
+- ✅ OK Providers: 
+    mason.providers.registry-api
+    mason.providers.client
+- ✅ OK neovim version >= 0.7.0
+
+mason.nvim [Registries] ~
+- ✅ OK Registry `github.com/mason-org/mason-registry version: 2025-04-26-torpid-ocean` is installed.
+
+mason.nvim [Core utils] ~
+- ✅ OK unzip: `UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.`
+- ✅ OK wget: `GNU Wget 1.21.4 built on linux-gnu.`
+- ✅ OK curl: `curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.7`
+- ✅ OK gzip: `gzip 1.12`
+- ✅ OK tar: `tar (GNU tar) 1.35`
+- ✅ OK bash: `GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)`
+- ✅ OK sh: `Ok`
+
+mason.nvim [Languages] ~
+- ⚠️ WARNING Go: not available
+  - ADVICE:
+    - spawn: go failed with exit code - and signal -. go is not executable
+- ⚠️ WARNING Composer: not available
+  - ADVICE:
+    - spawn: composer failed with exit code - and signal -. composer is not executable
+- ⚠️ WARNING PHP: not available
+  - ADVICE:
+    - spawn: php failed with exit code - and signal -. php is not executable
+- ⚠️ WARNING luarocks: not available
+  - ADVICE:
+    - spawn: luarocks failed with exit code - and signal -. luarocks is not executable
+- ⚠️ WARNING Ruby: not available
+  - ADVICE:
+    - spawn: ruby failed with exit code - and signal -. ruby is not executable
+- ⚠️ WARNING javac: not available
+  - ADVICE:
+    - spawn: javac failed with exit code - and signal -. javac is not executable
+- ⚠️ WARNING RubyGem: not available
+  - ADVICE:
+    - spawn: gem failed with exit code - and signal -. gem is not executable
+- ⚠️ WARNING julia: not available
+  - ADVICE:
+    - spawn: julia failed with exit code - and signal -. julia is not executable
+- ✅ OK python: `Python 3.12.3`
+- ✅ OK node: `v20.13.1`
+- ✅ OK cargo: `cargo 1.86.0 (adf9b6ad1 2025-02-28)`
+- ✅ OK java: `openjdk version "21.0.6" 2025-01-21`
+- ✅ OK npm: `10.5.2`
+- ✅ OK pip: `pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)`
+- ✅ OK python venv: `Ok`
+
+mason.nvim [GitHub] ~
+- ✅ OK GitHub API rate limit. Used: 3. Remaining: 4997. Limit: 5000. Reset: Sun 27 Apr 2025 05:57:35 PM +0330.
+
+==============================================================================
+nvim-treesitter:                     require("nvim-treesitter.health").check()
+
+Installation ~
+- ⚠️ WARNING `tree-sitter` executable not found (parser generator, only needed for :TSInstallFromGrammar, not required for :TSInstall)
+- ✅ OK `node` found v20.13.1 (only needed for :TSInstallFromGrammar)
+- ✅ OK `git` executable found.
+- ✅ OK `cc` executable found. Selected from { vim.NIL, "cc", "gcc", "clang", "cl", "zig" }
+  Version: cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+- ✅ OK Neovim was compiled with tree-sitter runtime ABI version 15 (required >=13). Parsers must be compatible with runtime ABI.
+
+OS Info:
+{
+  machine = "x86_64",
+  release = "6.8.0-58-generic",
+  sysname = "Linux",
+  version = "#60-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 14 18:29:48 UTC 2025"
+} ~
+
+Parser/Features         H L F I J
+  - bash                ✓ ✓ ✓ . ✓
+  - c                   ✓ ✓ ✓ ✓ ✓
+  - diff                ✓ . ✓ . ✓
+  - html                ✓ ✓ ✓ ✓ ✓
+  - lua                 ✓ ✓ ✓ ✓ ✓
+  - luadoc              ✓ . . . .
+  - markdown            ✓ . ✓ ✓ ✓
+  - markdown_inline     ✓ . . . ✓
+  - query               ✓ ✓ ✓ ✓ ✓
+  - rust                ✓ ✓ ✓ ✓ ✓
+  - toml                ✓ ✓ ✓ ✓ ✓
+  - vim                 ✓ ✓ ✓ . ✓
+  - vimdoc              ✓ . . . ✓
+  - yaml                ✓ ✓ ✓ ✓ ✓
+
+  Legend: H[ighlight], L[ocals], F[olds], I[ndents], In[j]ections
+         +) multiple parsers found, only one will be used
+         x) errors found in the query, try to run :TSUpdate {lang} ~
+
+==============================================================================
+telescope:                                 require("telescope.health").check()
+
+Checking for required plugins ~
+- ✅ OK plenary installed.
+- ✅ OK nvim-treesitter installed.
+
+Checking external dependencies ~
+- ✅ OK rg: found ripgrep 14.1.0
+- ⚠️ WARNING fd: not found. Install [sharkdp/fd](https://github.com/sharkdp/fd) for extended capabilities
+
+===== Installed extensions ===== ~
+
+Telescope Extension: `fzf` ~
+- ✅ OK lib working as expected
+- ✅ OK file_sorter correctly configured
+- ✅ OK generic_sorter correctly configured
+
+Telescope Extension: `ui-select` ~
+- No healthcheck provided
+
+==============================================================================
+vim.deprecated:                       require("vim.deprecated.health").check()
+
+ ~
+- ⚠️ WARNING client.notify is deprecated. Feature will be removed in Nvim 0.13
+  - ADVICE:
+    - use client:notify instead.
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/lazydev.nvim/lua/lazydev/lsp.lua:90
+        /home/draco/.local/share/nvim/lazy/lazydev.nvim/lua/lazydev/buf.lua:199
+        vim/_editor.lua:0
+
+ ~
+- ⚠️ WARNING vim.validate is deprecated. Feature will be removed in Nvim 1.0
+  - ADVICE:
+    - use vim.validate(name, value, validator, optional_or_msg) instead.
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        /usr/share/nvim/runtime/filetype.lua:36
+        [C]:-1
+        vim/shared.lua:0
+        [C]:-1
+        /usr/share/nvim/runtime/filetype.lua:35
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/fidget.nvim/lua/fidget/notification/window.lua:307
+        /home/draco/.local/share/nvim/lazy/fidget.nvim/lua/fidget/notification/window.lua:433
+        /home/draco/.local/share/nvim/lazy/fidget.nvim/lua/fidget/notification.lua:374
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/fidget.nvim/lua/fidget/notification/window.lua:167
+        /home/draco/.local/share/nvim/lazy/fidget.nvim/lua/fidget/notification.lua:373
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/fidget.nvim/lua/fidget/poll.lua:100
+        vim/_editor.lua:0
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
+        vim/shared.lua:0
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:113
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:81
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/window/init.lua:113
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:95
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:61
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:70
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/list.lua:96
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:53
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/window/init.lua:132
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:95
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:61
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:70
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/list.lua:96
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:53
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
+        vim/shared.lua:0
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:56
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:53
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/init.lua:37
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/init.lua:182
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:20
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:45
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:45
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        vim/_editor.lua:0
+        /usr/share/nvim/runtime/lua/vim/health.lua:379
+        nvim>:1
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        /usr/share/nvim/runtime/lua/vim/health.lua:386
+        nvim>:1
+    - stack traceback:
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+        /home/draco/.local/share/nvim/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+        /home/draco/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:87
+        [C]:-1
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/health.lua:45
+        /home/draco/.local/share/nvim/lazy/blink.cmp/lua/blink/cmp/health.lua:78
+        equire("blink.cmp.health").check():1
+        [C]:-1
+        /usr/share/nvim/runtime/lua/vim/health.lua:409
+        nvim>:1
+
+==============================================================================
+vim.health:                               require("vim.health.health").check()
+
+Configuration ~
+- ✅ OK no issues found
+
+Runtime ~
+- ✅ OK $VIMRUNTIME: /usr/share/nvim/runtime
+
+Performance ~
+- ✅ OK Build type: RelWithDebInfo
+
+Remote Plugins ~
+- ✅ OK Up to date
+
+terminal ~
+- key_backspace (kbs) terminfo entry: `key_backspace=\177`
+- key_dc (kdch1) terminfo entry: `key_dc=\E[3~`
+- $COLORTERM="truecolor"
+
+External Tools ~
+- ✅ OK ripgrep 14.1.0 (/usr/bin/rg)
+
+==============================================================================
+vim.lsp:                                     require("vim.lsp.health").check()
+
+- LSP log level : WARN
+- Log path: /home/draco/.local/state/nvim/lsp.log
+- Log size: 0 KB
+
+vim.lsp: Active Clients ~
+- lua_ls (id: 1)
+  - Version: 3.14.0
+  - Root directory: ~/.config/nvim
+  - Command: { "lua-language-server" }
+  - Settings: {
+      Lua = {
+        completion = {
+          callSnippet = "Replace"
+        }
+      }
+    }
+  - Attached buffers: 6
+
+vim.lsp: Enabled Configurations ~
+
+vim.lsp: File Watcher ~
+- file watching "(workspace/didChangeWatchedFiles)" disabled on all clients
+
+vim.lsp: Position Encodings ~
+- No buffers contain mixed position encodings
+
+==============================================================================
+vim.provider:                           require("vim.provider.health").check()
+
+Clipboard (optional) ~
+- ✅ OK Clipboard tool found: xclip
+
+Node.js provider (optional) ~
+- Node.js: v20.13.1
+
+- ⚠️ WARNING Missing "neovim" npm (or yarn, pnpm) package.
+  - ADVICE:
+    - Run in shell: npm install -g neovim
+    - Run in shell (if you use yarn): yarn global add neovim
+    - Run in shell (if you use pnpm): pnpm install -g neovim
+    - You may disable this provider (and warning) by adding `let g:loaded_node_provider = 0` to your init.vim
+
+Perl provider (optional) ~
+- ⚠️ WARNING "Neovim::Ext" cpan module is not installed
+  - ADVICE:
+    - See :help |provider-perl| for more information.
+    - You can disable this provider (and warning) by adding `let g:loaded_perl_provider = 0` to your init.vim
+- ⚠️ WARNING No usable perl executable found
+
+Python 3 provider (optional) ~
+- `g:python3_host_prog` is not set. Searching for python3 in the environment.
+- Executable: /usr/bin/python3
+- Python version: 3.12.3
+- pynvim version: 0.5.0
+- ⚠️ WARNING Could not contact PyPI to get latest version.
+- ❌ ERROR HTTP request failed: error: curl error with https://pypi.org/pypi/pynvim/json: 60
+
+Python virtualenv ~
+- ✅ OK no $VIRTUAL_ENV
+
+Ruby provider (optional) ~
+- ⚠️ WARNING `ruby` and `gem` must be in $PATH.
+  - ADVICE:
+    - Install Ruby and verify that `ruby` and `gem` commands work.
+
+==============================================================================
+vim.treesitter:                       require("vim.treesitter.health").check()
+
+Treesitter features ~
+- Treesitter ABI support: min 13, max 15
+- WASM parser support: false
+
+Treesitter parsers ~
+- ✅ OK Parser: bash                 ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/bash.so
+- ✅ OK Parser: c                    ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/c.so
+- ✅ OK Parser: diff                 ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/diff.so
+- ✅ OK Parser: html                 ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/html.so
+- ✅ OK Parser: lua                  ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/lua.so
+- ✅ OK Parser: luadoc               ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/luadoc.so
+- ✅ OK Parser: markdown             ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/markdown.so
+- ✅ OK Parser: markdown_inline      ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/markdown_inline.so
+- ✅ OK Parser: query                ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/query.so
+- ✅ OK Parser: rust                 ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/rust.so
+- ✅ OK Parser: toml                 ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/toml.so
+- ✅ OK Parser: vim                  ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/vim.so
+- ✅ OK Parser: vimdoc               ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/vimdoc.so
+- ✅ OK Parser: yaml                 ABI: 14, path: /home/draco/.local/share/nvim/lazy/nvim-treesitter/parser/yaml.so
+
+==============================================================================
+which-key:                                 require("which-key.health").check()
+
+- ✅ OK Most of these checks are for informational purposes only.
+  WARNINGS should be treated as a warning, and don't necessarily indicate a problem with your config.
+  Please |DON'T| report these warnings as an issue.
+
+Checking your config ~
+- ✅ OK |mini.icons| is installed
+- ✅ OK |nvim-web-devicons| is installed
+
+Checking for issues with your mappings ~
+- ✅ OK No issues reported
+
+checking for overlapping keymaps ~
+- ⚠️ WARNING In mode `n`, <s> overlaps with <sh>, <shl>, <shn>, <sa>, <sf>, <sfl>, <sfn>, <sn>, <sF>, <sFl>, <sFn>, <sr>, <srl>, <srn>, <sd>, <sdl>, <sdn>:
+  - <sh>: Highlight surrounding
+  - <shl>: Highlight previous surrounding
+  - <shn>: Highlight next surrounding
+  - <sa>: Add surrounding
+  - <sf>: Find right surrounding
+  - <sfl>: Find previous right surrounding
+  - <sfn>: Find next right surrounding
+  - <sn>: Update `MiniSurround.config.n_lines`
+  - <sF>: Find left surrounding
+  - <sFl>: Find previous left surrounding
+  - <sFn>: Find next left surrounding
+  - <sr>: Replace surrounding
+  - <srl>: Replace previous surrounding
+  - <srn>: Replace next surrounding
+  - <sd>: Delete surrounding
+  - <sdl>: Delete previous surrounding
+  - <sdn>: Delete next surrounding
+- ⚠️ WARNING In mode `n`, <gb> overlaps with <gbc>:
+  - <gbc>: Comment toggle current block
+- ⚠️ WARNING In mode `n`, <gc> overlaps with <gcO>, <gco>, <gcA>, <gcc>:
+  - <gc>: Comment toggle linewise
+  - <gcO>: Comment insert above
+  - <gco>: Comment insert below
+  - <gcA>: Comment insert end of line
+  - <gcc>: Comment toggle current line
+- ⚠️ WARNING In mode `x`, <a> overlaps with <a%>, <al>, <an>:
+  - <a>: Around textobject
+  - <al>: Around last textobject
+  - <an>: Around next textobject
+- ⚠️ WARNING In mode `x`, <i> overlaps with <in>, <il>:
+  - <i>: Inside textobject
+  - <in>: Inside next textobject
+  - <il>: Inside last textobject
+- ⚠️ WARNING In mode `o`, <a> overlaps with <an>, <al>:
+  - <a>: Around textobject
+  - <an>: Around next textobject
+  - <al>: Around last textobject
+- ⚠️ WARNING In mode `o`, <i> overlaps with <in>, <il>:
+  - <i>: Inside textobject
+  - <in>: Inside next textobject
+  - <il>: Inside last textobject
+- ⚠️ WARNING In mode `n`, <sd> overlaps with <sdl>, <sdn>:
+  - <sd>: Delete surrounding
+  - <sdl>: Delete previous surrounding
+  - <sdn>: Delete next surrounding
+- ⚠️ WARNING In mode `n`, <sr> overlaps with <srl>, <srn>:
+  - <sr>: Replace surrounding
+  - <srl>: Replace previous surrounding
+  - <srn>: Replace next surrounding
+- ⚠️ WARNING In mode `n`, <sF> overlaps with <sFl>, <sFn>:
+  - <sF>: Find left surrounding
+  - <sFl>: Find previous left surrounding
+  - <sFn>: Find next left surrounding
+- ⚠️ WARNING In mode `n`, <sf> overlaps with <sfl>, <sfn>:
+  - <sf>: Find right surrounding
+  - <sfl>: Find previous right surrounding
+  - <sfn>: Find next right surrounding
+- ⚠️ WARNING In mode `n`, <sh> overlaps with <shl>, <shn>:
+  - <sh>: Highlight surrounding
+  - <shl>: Highlight previous surrounding
+  - <shn>: Highlight next surrounding
+- ✅ OK Overlapping keymaps are only reported for informational purposes.
+  This doesn't necessarily mean there is a problem with your config.
+
+Checking for duplicate mappings ~
+- ✅ OK No duplicate mappings found
+
