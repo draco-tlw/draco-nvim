@@ -657,8 +657,6 @@ require('lazy').setup({
         cssmodules_ls = {},
 
         gopls = {},
-
-        sqls = {},
       }
       -- Ensure the servers and tools above are installed
       --
@@ -688,6 +686,9 @@ require('lazy').setup({
         -- for python
         'isort',
         'black',
+
+        -- for sql
+        'sqlfluff',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -748,6 +749,7 @@ require('lazy').setup({
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        sql = { 'sqlfluff' },
       },
     },
   },
