@@ -641,6 +641,7 @@ require('lazy').setup({
         cssmodules_ls = {},
 
         gopls = {},
+        golangci_lint_ls = {},
 
         postgrestools = {},
       }
@@ -690,11 +691,6 @@ require('lazy').setup({
 
         -- for spell checker
         'cspell',
-
-        -- for go
-        'goimports',
-        'golangci-lint',
-        'gofumpt',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -762,7 +758,6 @@ require('lazy').setup({
         html = { 'prettierd', 'prettier', stop_after_first = true },
         yaml = { 'prettierd', 'prettier', stop_after_first = true },
         markdown = { 'prettierd', 'prettier', stop_after_first = true },
-        go = { 'gofumpt', 'goimports' },
         sql = { 'pg_format' },
       },
     },

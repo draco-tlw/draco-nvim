@@ -5,13 +5,14 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lint = require 'lint'
+
       lint.linters_by_ft = {
         markdown = { 'markdownlint', 'cspell' },
         javascript = { 'eslint_d', 'cspell' },
         typescirpt = { 'eslint_d', 'cspell' },
         javascriptreact = { 'eslint_d', 'cspell' },
         typescirptreact = { 'eslint_d', 'cspell' },
-        go = { 'golangcilint', 'cspell' },
+        go = { 'cspell' },
         python = { 'cspell' },
         html = { 'cspell' },
         css = { 'stylelint', 'cspell' },
