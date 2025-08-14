@@ -25,7 +25,7 @@ vim.opt.mouse = 'a'
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
+-- Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
@@ -74,9 +74,6 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.opt.confirm = true
-
-vim.opt.spell = true
-vim.opt.spelllang = { 'en' }
 
 vim.opt.tabstop = 4 -- Number of visual spaces per tab.
 vim.opt.softtabstop = 4 -- Number of spaces inserted when pressing <Tab>.
@@ -591,7 +588,6 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
         pyright = {},
         rust_analyzer = {
           settings = {
@@ -638,18 +634,6 @@ require('lazy').setup({
         --
         vtsls = {},
 
-        eslint = {
-          -- on_attach = function(client, bufnr)
-          --   vim.api.nvim_create_autocmd('BufWritePre', {
-          --     buffer = bufnr,
-          --     command = 'EslintFixAll',
-          --   })
-          -- end,
-        },
-        eslint_d = {},
-
-        stylelint = {},
-
         cssls = {
           capabilities = capabilities,
         },
@@ -657,6 +641,8 @@ require('lazy').setup({
         cssmodules_ls = {},
 
         gopls = {},
+
+        postgrestools = {},
       }
       -- Ensure the servers and tools above are installed
       --
@@ -676,19 +662,39 @@ require('lazy').setup({
         -- for lua
         'stylua', -- Used to format Lua code
 
+        -- for markdown
+        'markdownlint',
+
         -- for rust
         'codelldb',
 
         -- for frontend
         'prettier', -- Prettier
         'prettierd',
+        'eslint',
+        'eslint_d',
+
+        -- for styling
+        'stylelint',
 
         -- for python
         'isort',
         'black',
 
+        -- for json
+        'jsonlint',
+
         -- for sql
         'sqlfluff',
+        'pgformatter',
+
+        -- for spell checker
+        'cspell',
+
+        -- for go
+        'goimports',
+        'golangci-lint',
+        'gofumpt',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -749,7 +755,15 @@ require('lazy').setup({
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-        sql = { 'sqlfluff' },
+        json = { 'prettierd', 'prettier', stop_after_first = true },
+        css = { 'prettierd', 'prettier', stop_after_first = true },
+        sass = { 'prettierd', 'prettier', stop_after_first = true },
+        scss = { 'prettierd', 'prettier', stop_after_first = true },
+        html = { 'prettierd', 'prettier', stop_after_first = true },
+        yaml = { 'prettierd', 'prettier', stop_after_first = true },
+        markdown = { 'prettierd', 'prettier', stop_after_first = true },
+        go = { 'gofumpt', 'goimports' },
+        sql = { 'pg_format' },
       },
     },
   },
@@ -939,7 +953,7 @@ require('lazy').setup({
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
         styles = {
-          comments = { italic = false }, -- Disable italics in comments
+          comments = { italic = true }, -- Disable italics in comments
         },
       }
 
@@ -1013,6 +1027,10 @@ require('lazy').setup({
         'javascript',
         'typescript',
         'css',
+        'scss',
+        'json',
+        'yaml',
+        'toml',
         'python',
         'go',
         'sql',
