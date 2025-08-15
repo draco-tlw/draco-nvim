@@ -19,7 +19,7 @@ return {
         sass = { 'stylelint', 'cspell' },
         scss = { 'stylelint', 'cspell' },
         json = { 'jsonlint', 'cspell' },
-        sql = { 'sqlfluff', 'cspell' },
+        sql = { 'cspell' },
         lua = { 'cspell' },
       }
 
