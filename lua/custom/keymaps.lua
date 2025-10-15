@@ -15,3 +15,5 @@ end, { noremap = true, silent = true, desc = 'Toggle comment (visual)' })
 local write_farsi = require 'custom.write-farsi'
 map('n', '<leader>wf', write_farsi.write, { noremap = true, silent = true, desc = 'Write farsi' })
 map('v', '<leader>wf', write_farsi.edit, { noremap = true, silent = true, desc = 'Write farsi' })
+
+map('n', '<leader>mp', '<cmd>MarkdownPreviewToggle<cr>', { desc = '[M]arkdown [P]review' })

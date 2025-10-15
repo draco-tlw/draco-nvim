@@ -16,7 +16,7 @@ return {
         python = { 'cspell' },
         html = { 'cspell' },
         css = { 'stylelint', 'cspell' },
-        sass = { 'stylelint', 'cspell' },
+        sass = { 'cspell' },
         scss = { 'stylelint', 'cspell' },
         json = { 'jsonlint', 'cspell' },
         sql = { 'cspell' },

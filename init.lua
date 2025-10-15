@@ -644,6 +644,12 @@ require('lazy').setup({
         golangci_lint_ls = {},
 
         sqls = {},
+
+        postgres_lsp = {
+          cmd = { 'postgrestools', 'lsp-proxy' },
+          filetypes = { 'sql' },
+          root_dir = require('lspconfig').util.root_pattern 'postgrestools.jsonc',
+        },
       }
       -- Ensure the servers and tools above are installed
       --
@@ -709,13 +715,13 @@ require('lazy').setup({
         },
       }
 
-      require('lspconfig').postgres_lsp.setup {
-        cmd = { 'postgrestools', 'lsp-proxy' },
-        filetypes = { 'sql' },
-        root_dir = require('lspconfig').util.root_pattern 'postgrestools.jsonc',
-        -- It's good practice to pass your capabilities here as well
-        capabilities = capabilities,
-      }
+      -- require('lspconfig').postgres_lsp.setup {
+      --   cmd = { 'postgrestools', 'lsp-proxy' },
+      --   filetypes = { 'sql' },
+      --   root_dir = require('lspconfig').util.root_pattern 'postgrestools.jsonc',
+      --   -- It's good practice to pass your capabilities here as well
+      --   capabilities = capabilities,
+      -- }
     end,
   },
 

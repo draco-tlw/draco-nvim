@@ -11,9 +11,9 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\f', ':Neotree reveal right<CR>', desc = 'NeoTree reveal', silent = true },
-    { '\\b', ':Neotree buffers reveal right<CR>', desc = 'NeoTree reveal', silent = true },
-    { '\\g', ':Neotree git_status reveal right<CR>', desc = 'NeoTree reveal', silent = true },
+    { '\\f', ':Neotree reveal left<CR>', desc = 'NeoTree reveal', silent = true },
+    { '\\b', ':Neotree buffers reveal left<CR>', desc = 'NeoTree reveal', silent = true },
+    { '\\g', ':Neotree git_status reveal left<CR>', desc = 'NeoTree reveal', silent = true },
     { '\\c', ':Neotree close<CR>', desc = 'NeoTree close', silent = true },
   },
   opts = {
