@@ -7,6 +7,8 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- vim.env.GOPROXY = 'https://mirror-go.runflare.com'
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -589,6 +591,8 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         pyright = {},
+        ruff = {},
+
         rust_analyzer = {
           settings = {
             ['rust-analyzer'] = {
@@ -642,7 +646,6 @@ require('lazy').setup({
 
         gopls = {},
         golangci_lint_ls = {},
-
         sqls = {},
 
         postgres_lsp = {
@@ -961,6 +964,7 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
+        transparent = true,
         styles = {
           comments = { italic = true }, -- Disable italics in comments
         },
@@ -1016,7 +1020,7 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    main = 'nvim-treesitter.config', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = {
@@ -1095,6 +1099,10 @@ require('lazy').setup({
   -- you can continue same window with `<space>sr` which resumes last telescope search
 }, {
 
+  rocks = {
+    hererocks = false,
+  },
+
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
@@ -1120,6 +1128,7 @@ require('lazy').setup({
 -- vim: ts=2 sts=2 sw=2 et
 --
 
--- to prevent background override opaticy
-vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
-vim.cmd [[ hi NormalNC guibg=NONE ctermbg=NONE ]]
+-- -- to prevent background override opaticy
+-- vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+-- vim.cmd [[ hi NormalNC guibg=NONE ctermbg=NONE ]]
+-- vim.cmd [[ hi NormalFloat guibg=NONE ctermbg=NONE ]]

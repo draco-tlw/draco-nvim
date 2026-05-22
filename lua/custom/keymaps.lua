@@ -13,7 +13,9 @@ map('v', '<leader>c', function()
 end, { noremap = true, silent = true, desc = 'Toggle comment (visual)' })
 
 local write_farsi = require 'custom.write-farsi'
-map('n', '<leader>wf', write_farsi.write, { noremap = true, silent = true, desc = 'Write farsi' })
-map('v', '<leader>wf', write_farsi.edit, { noremap = true, silent = true, desc = 'Write farsi' })
+map('n', '<leader>wf', write_farsi.write, { noremap = true, silent = true, desc = '[W]rite [F]arsi' })
+map('v', '<leader>wf', write_farsi.edit, { noremap = true, silent = true, desc = '[W]rite [F]arsi' })
 
 map('n', '<leader>mp', '<cmd>MarkdownPreviewToggle<cr>', { desc = '[M]arkdown [P]review' })
+
+map('n', '<leader>z', '<cmd>ZenMode<CR>', { desc = 'Toggle [Z]en Mode' })

@@ -15,7 +15,7 @@ return {
         go = { 'cspell' },
         python = { 'cspell' },
         html = { 'cspell' },
-        css = { 'stylelint', 'cspell' },
+        css = { 'cspell' },
         sass = { 'cspell' },
         scss = { 'stylelint', 'cspell' },
         json = { 'jsonlint', 'cspell' },
