@@ -1,5 +1,9 @@
 return {
   'numToStr/Comment.nvim',
-  opts = {},
   lazy = false,
+  opts = {
+    pre_hook = function()
+      return vim.bo.commentstring
+    end,
+  },
 }
